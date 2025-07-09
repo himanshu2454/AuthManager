@@ -4,6 +4,14 @@ on:
   push:
     tags:
       - 'v*'  # Runs when you push a tag like v1.0.0
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version'
+        required: true
+        default: '1.0.0'
+  
 
 jobs:
   build:
