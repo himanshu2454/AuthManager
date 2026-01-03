@@ -10,10 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{02EA681E-C7D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3D1DD0FD-F7C6-4103-A746-5377150E7429}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionConfigs", "SolutionConfigs", "{33333333-3333-3333-3333-333333333333}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B234A567-C890-D123-E456-F7890ABCDE12}"
 	ProjectSection(SolutionItems) = preProject
-		SolutionConfigs\LICENSE = SolutionConfigs\LICENSE
-		SolutionConfigs\README.md = SolutionConfigs\README.md
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
