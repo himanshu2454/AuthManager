@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3D1DD0FD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionConfigs", "SolutionConfigs", "{33333333-3333-3333-3333-333333333333}"
 	ProjectSection(SolutionItems) = preProject
-		SolutionConfigs\.gitattributes = SolutionConfigs\.gitattributes
-		SolutionConfigs\.gitignore = SolutionConfigs\.gitignore
 		SolutionConfigs\LICENSE = SolutionConfigs\LICENSE
 		SolutionConfigs\README.md = SolutionConfigs\README.md
 	EndProjectSection
