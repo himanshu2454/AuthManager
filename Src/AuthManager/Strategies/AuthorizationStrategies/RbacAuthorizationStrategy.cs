@@ -1,6 +1,4 @@
-﻿
-
-using AuthManager.Interface;
+﻿using AuthManager.Interface;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

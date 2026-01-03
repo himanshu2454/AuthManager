@@ -1,4 +1,4 @@
-﻿namespace AuthManager.Interface
+﻿namespace AuthManager.Authorization
 {
     public interface IAuthorizationStrategy
     {

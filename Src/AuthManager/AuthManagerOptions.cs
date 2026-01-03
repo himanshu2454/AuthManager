@@ -1,10 +1,9 @@
-﻿using AuthManager.Interface;
-using AuthManager.Strategies.AuthenticationStrategies;
+﻿using AuthManager.Strategies.AuthenticationStrategies;
 using AuthManager.Strategies.AuthorizationStrategies;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AuthManager.Core
+namespace AuthManager
 {
     public class AuthManagerOptions : IAuthManagerOptions
     {

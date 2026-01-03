@@ -1,8 +1,6 @@
-﻿using AuthManager.Interface;
-
-namespace AuthManager.Models
+﻿namespace AuthManager.Models
 {
-    public class AuthManagerOptions
+    public class AutheManagerOptions
     {
         public string Schema { get; set; } = string.Empty;
         public string? AuthStrategy { get; set; }

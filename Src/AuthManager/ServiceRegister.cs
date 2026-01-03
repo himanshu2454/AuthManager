@@ -1,6 +1,4 @@
-﻿using AuthManager.Core;
-using AuthManager.Interface;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace AuthManager
 {

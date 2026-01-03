@@ -1,6 +1,4 @@
-﻿using AuthManager.Core;
-
-namespace AuthManager.Interface
+﻿namespace AuthManager
 {
     public interface IAuthManagerOptions
     {

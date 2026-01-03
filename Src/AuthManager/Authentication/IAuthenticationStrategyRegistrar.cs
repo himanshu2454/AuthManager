@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AuthManager.Interface
+namespace AuthManager.Authentication
 {
     public interface IAuthenticationStrategyRegistrar
     {
