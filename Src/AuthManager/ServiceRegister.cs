@@ -1,17 +1,21 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AuthManager
 {
     public static class AuthManagerServiceCollectionExtensions
     {
-        public static IServiceCollection AddAuthManager(this IServiceCollection services, Action<IAuthManagerOptions> configureAction)
+        public static IServiceCollection AddAuthManager(
+            this IServiceCollection services,
+            IConfiguration configuration, // Pass config directly
+            Action<AuthManager> configureAction)
         {
-            if (configureAction == null) throw new ArgumentNullException(nameof(configureAction));
+            var manager = new AuthManager();
+            configureAction(manager);
 
-            var options = new AuthManagerOptions();
-            configureAction(options);
-            options.RegisterStrategyServices?.Invoke(services);
-            //services.AddScoped<IAuthManager, AuthManager>();
+            // Execute all queued registrations using the real configuration
+            manager.RegisterStrategyServices?.Invoke(services, configuration);
+
             return services;
         }
     }

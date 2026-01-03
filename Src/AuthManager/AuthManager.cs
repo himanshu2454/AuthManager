@@ -1,20 +1,22 @@
-﻿using AuthManager.Authentication;
-using AuthManager.Authorization;
+﻿using AuthManager.Strategies;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AuthManager;
 
-public interface IAuthManager
+public class AuthManager : IAuthManager
 {
-}
+    internal Action<IServiceCollection, IConfiguration>? RegisterStrategyServices { get; private set; }
 
-public class AuthorizationManager : IAuthManager
-{
-    private readonly IAuthenticationStrategy _authn;
-    private readonly IAuthorizationStrategy _authz;
-
-    public AuthorizationManager(IAuthenticationStrategy authnStrategy, IAuthorizationStrategy authzStrategy)
+    public AuthManager AddAuthentication<T>() where T : IAuthenticationStrategy
     {
-        _authn = authnStrategy;
-        _authz = authzStrategy;
+        RegisterStrategyServices += (services, config) => T.Register(services, config);
+        return this;
+    }
+
+    public AuthManager AddAuthorization<T>() where T : IAuthorizationStrategy
+    {
+        RegisterStrategyServices += (services, config) => T.Register(services, config);
+        return this;
     }
 }
